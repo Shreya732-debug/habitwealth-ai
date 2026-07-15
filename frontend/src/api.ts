@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://habitwealth-ai.onrender.com",
+  baseURL:
+    process.env.REACT_APP_API_URL || "https://habitwealth-ai.onrender.com",
 });
 
 API.interceptors.request.use((config) => {
