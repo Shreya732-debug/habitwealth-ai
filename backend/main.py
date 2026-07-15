@@ -38,7 +38,7 @@ from routers import (
     agent,
     csv_upload,
     purchase_advisor,
-    rag,
+    # rag,
 )
 
 app.include_router(auth.router)
@@ -48,7 +48,7 @@ app.include_router(calculator_routes.router)
 app.include_router(agent.router)
 app.include_router(csv_upload.router)
 app.include_router(purchase_advisor.router)
-app.include_router(rag.router)
+# app.include_router(rag.router)
 
 
 @app.get("/health")
