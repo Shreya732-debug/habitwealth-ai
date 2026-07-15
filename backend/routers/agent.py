@@ -1,5 +1,5 @@
 # backend/routers/agent.py
-from rag_engine import retrieve_relevant_chunks
+# from rag_engine import retrieve_relevant_chunks
 from google import genai
 from google.genai import types
 from fastapi import APIRouter, Depends, HTTPException
@@ -401,12 +401,14 @@ async def ask_agent(body: AskRequest, user=Depends(get_current_user)):
 
     health = await _get_health_alerts(ctx)
 
-    try:
-        rag_chunks = retrieve_relevant_chunks(
-            query=body.question, user_id=str(user.id), top_k=3
-        )
-    except Exception:
-        rag_chunks = []
+    # try:
+    #   rag_chunks = retrieve_relevant_chunks(
+    #      query=body.question, user_id=str(user.id), top_k=3
+    # )
+    # except Exception:
+    #
+    #    rag_chunks = []
+    rag_chunks = []
 
     client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
