@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import { Send, Bot, User, Paperclip, X, FileText, Trash2 } from "lucide-react";
+import { Send, Bot, User, Paperclip, Trash2 } from "lucide-react";
 import API from "../api";
 
 interface Message {
